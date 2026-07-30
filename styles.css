@@ -1,0 +1,192 @@
+body {
+    background-image: url('images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    perspective: 1000px;
+    overflow-x: hidden;
+}
+.parallax-bg {
+    position: fixed;
+    top: -5%;
+    left: -5%;
+    width: 110vw;
+    height: 110vh;
+    z-index: -2;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.08);
+    transition: transform 0.15s ease-out;
+    will-change: transform;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: transparent;
+}
+.logo a {
+    font-family: 'Gravity Variable', monospace;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+.nav-links a {
+    font-family: 'Favorit Medium', monospace;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.nav-links a:hover {
+    color: #c5c5c5;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+.login-btn {
+    font-family: 'Arizona Sans Bold', monospace;
+    font-size: 1.2rem;
+    color:#000000;
+    text-decoration: none;
+    padding: 8px 24px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.login-btn:hover {
+    background-color: #c5c5c5;
+    color: #333333;
+}
+.hero-container {
+    width: 100%;
+    height: calc(100vh - 250px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 8vw;
+    padding-right: 3vw;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    overflow: visible;
+}
+.hero-left {
+    flex: 1;
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    z-index: 2;
+    transform: translateY(20px);
+}
+.hero-right {
+    flex: 1.2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: 110px;
+    padding-bottom: 20px;
+}
+.pod-image {
+    width: 100%;
+    max-width: 630px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(20px 15px 3px rgba(0, 0, 0, 0.20));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+.pod-image:hover {
+    transform: translateY(-6px) scale(1.01);
+    filter: drop-shadow(14px 17px 12px rgba(0, 0, 0, 0.45));
+}
+.main-title {
+    font-family: 'Alte Haas Grotesk Bold', sans-serif;
+    font-size: 5rem;
+    font-weight: bolder;
+    line-height: 1.05;
+    color: #1a172c;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+.sub-title {
+    font-family: 'Alte Haas Grotesk Regular', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #2c283e;
+    margin: -10px 0 10px 0;
+}
+.features-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 360px;
+    margin: 8px 0;
+}
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.feature-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.feature-item span {
+    font-family: sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(30, 25, 45, 0.8);
+    white-space: nowrap;
+}
+.button-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+.btn {
+    font-family: 'Alte Haas Grotesk Regular', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 12px 36px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    display: inline-block;
+    text-align: center;
+}
+.btn-primary {
+    background-color: #d1b8eb;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.btn-primary:hover {
+    background-color: #dfc8f8;
+    transform: translateY(-2px);
+}
+.btn-secondary {
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: #ffffff;
+    background-color: transparent;
+}
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,74 @@
+<html>
+<head>
+    <title>Sleeppod.sg</title>
+    <link rel="stylesheet" href="styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="parallax-bg" id="parallaxBg"></div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="#">『SLEEPPOD』</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="nav-action">
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </header>
+<main class="hero-container">
+    <div class="hero-left">
+        <h1 class="main-title">Rest Smarter.<br>Live Better.</h1>
+
+        <p class="sub-title">Smart Shared Rest Spaces for Everyday Life</p>
+
+        <div class="features-row">
+            <div class="feature-item">
+                <img src="images/lock.PNG" alt="Private Space" class="feature-icon">
+                <span>Private Space</span>
+            </div>
+            <div class="feature-item">
+                <img src="images/clean.PNG" alt="Clean" class="feature-icon">
+                <span>Clean</span>
+            </div>
+            <div class="feature-item">
+                <img src="images/phone.PNG" alt="Smart & Easy" class="feature-icon">
+                <span>Smart & Easy</span>
+            </div>
+        </div>
+
+        <div class="button-row">
+            <a href="#" class="btn btn-primary">Book Now</a>
+            <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="images/sleeppod.PNG" alt="SleepPod" class="pod-image">
+    </div>
+</main>
+<script>
+    const bg = document.getElementById('parallaxBg');
+    
+    window.addEventListener('mousemove', (e) => {
+    const xVal = (e.clientX / window.innerWidth) - 0.5;
+    const yVal = (e.clientY / window.innerHeight) - 0.5;
+
+    const rotateY = xVal * 30; 
+    const rotateX = -yVal * 30; 
+    const translateX = xVal * 60;
+    const translateY = yVal * 60;
+
+    bg.style.transform = `scale(1.15) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(${translateX}px, ${translateY}px)`;
+    });
+</script>
+</body>
+</html>
